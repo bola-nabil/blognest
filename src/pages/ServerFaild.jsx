@@ -12,7 +12,7 @@ const ServerFaild = () => {
       </p>
 
       <Link
-        to="/login"
+        to="/"
         className="bg-blue-600 hover:bg-blue-700 transition text-white font-medium py-2 px-5 rounded-md shadow-md"
       >
         Go to Login
