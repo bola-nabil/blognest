@@ -34,8 +34,8 @@ function App() {
 
       <Routes>
         <Route path="/register" element={<Register />} />
-        <Route path="/" element={<Login />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Home />} />
         <Route path="/feed" element={<Feed />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/profile/:id" element={<Profile />} />
