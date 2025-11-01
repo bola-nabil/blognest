@@ -31,7 +31,7 @@ const ChangePassword = () => {
     try {
       const res = await api.post('/v1/change-password', form);
       setMessage(res.data.message || 'Password changed successfully.');
-      navigate('/login');
+      navigate('/');
       setForm({
         current_password: '',
         new_password: '',
