@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '@/components/Container';
-import ExploreBlogs from '@/components/explore/exploreBlogs';
+import ExploreBlogs from '@/components/explore/ExploreBlogs';
 
 const Explore = () => {
   return (
