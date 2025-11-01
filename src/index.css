@@ -28,7 +28,7 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem
+    --radius: 0.5rem;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -54,7 +54,7 @@
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%
+    --chart-5: 340 75% 55%;
   }
 }
 
@@ -65,4 +65,43 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+html.dark .ck.ck-editor__main > .ck-editor__editable {
+  background-color: #1f2937 !important; /* dark gray */
+  color: #f3f4f6 !important; /* light text */
+}
+html.dark .ck.ck-toolbar {
+  background-color: #374151 !important;
+  border-color: #4b5563 !important;
+}
+
+nav {
+  background: linear-gradient(
+    135deg,
+    #4a90e2,
+    #007bff
+  );
+  padding: 0.8rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.links ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.links ul li svg {
+  color: white;
+  padding-right: 5px;
+}
+
+.links a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #dfe9ff;
 }
