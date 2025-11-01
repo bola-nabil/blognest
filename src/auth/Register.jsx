@@ -29,7 +29,7 @@ const Register = () => {
       if (res.data.token) {
         localStorage.setItem('token', res.data.token);
       }
-      window.location.href = '/';
+      window.location.href = '/login';
     } catch (err) {
       setError(err.response?.data?.message || 'something went wrong');
     } finally {
@@ -88,7 +88,7 @@ const Register = () => {
         <p className="text-center text-sm text-gray-600 mt-4">
           Already have an account?{' '}
           <a
-            href="/"
+            href="/login"
             className="text-blue-600 font-semibold hover:underline"
           >
             Sign In
