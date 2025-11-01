@@ -9,7 +9,7 @@ import {
 import NavLinks from './NavLinks';
 import { api } from '@/api';
 import { logout } from '../../utils/logout';
-import ProfileNav from './profileNav';
+import ProfileNav from './ProfileNav';
 import NotificationBell from '../notifications/NotificationBell';
 
 const Navbar = () => {
