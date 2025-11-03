@@ -25,7 +25,7 @@ import ServerFaild from './pages/ServerFaild';
 
 function App() {
   const location = useLocation();
-  const hideNavBarPaths = ['/register', '/login', '/server-faild'];
+  const hideNavBarPaths = ['/register', '/', '/server-faild'];
   const shouldHideNavBar = hideNavBarPaths.includes(location.pathname);
 
   return (
@@ -34,8 +34,8 @@ function App() {
 
       <Routes>
         <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/feed" element={<Feed />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/profile/:id" element={<Profile />} />

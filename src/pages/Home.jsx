@@ -1,5 +1,5 @@
-import React, {useMemo, useEffect} from 'react';
-import { Link, useNavigate} from 'react-router-dom';
+import React, {useMemo} from 'react';
+import { Link} from 'react-router-dom';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useBlogs } from '@/hooks/useBlogs';
@@ -9,18 +9,9 @@ import TrendingTags from '../components/tags/TrendingTags';
 import LastBlogsCard from '@/components/cards/LastBlogsCard';
 import HowToFollow from '@/components/following/HowToFollow';
 import LastBlogsSkeleton from '@/components/Loading/LastBlogsSkeleton';
-import { useUserAuth } from '@/hooks/useUserAuth';
 
 const Home = () => {
   const { blogs, loading: blogsLoading } = useBlogs();
-  const { user, loading: authLoading } = useUserAuth();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (!authLoading && !user) {
-      navigate('/login');
-    }
-  }, [authLoading, user, navigate]);
 
   const lastBlogs = useMemo(() => {
     return blogs

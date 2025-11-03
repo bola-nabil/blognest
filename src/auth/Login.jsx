@@ -28,7 +28,7 @@ const Login = () => {
       if (res.data.token) {
         localStorage.setItem('token', res.data.token);
         localStorage.setItem('userId', res.data.user.id);
-        window.location.href = '/';
+        window.location.href = '/home';
       }
     } catch (err) {
       setError(err.response?.data?.message || 'something wrong');
