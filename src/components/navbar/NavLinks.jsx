@@ -12,7 +12,7 @@ import {
 
 const NavLinks = () => {
   const navLinks = [
-    { id: 1, title: 'Home', path: '/', icon: faHouse },
+    { id: 1, title: 'Home', path: '/home', icon: faHouse },
     { id: 2, title: 'Explore', path: '/explore', icon: faFire },
     { id: 3, title: 'Categories', path: '/categories', icon: faTags },
     { id: 4, title: 'Bookmarks', path: '/bookmarks', icon: faBookmark },

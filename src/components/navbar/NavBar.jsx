@@ -91,7 +91,7 @@ const Navbar = () => {
           </div>
         )}
         <div className="logo">
-          <Link to="/" className="text-white font-bold text-2xl">
+          <Link to="/home" className="text-white font-bold text-2xl">
             Blognest
           </Link>
         </div>
