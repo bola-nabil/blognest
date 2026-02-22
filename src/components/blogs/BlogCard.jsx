@@ -1,8 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faComment } from '@fortawesome/free-solid-svg-icons';
+import {faBookmark, regularBookmark, faHeart, faComment} from "../../utils/icons";
 import { getExcerpt } from '@/utils/getExcerpt';
-import {faBookmark, regularBookmark} from "../../utils/icons";
 import { Link } from 'react-router-dom';
 
 const BlogCard = ({ blog, handleToggleBookmark }) => {
