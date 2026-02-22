@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faMagnifyingGlass,
-  faBars,
-  faXmark,
-} from '@fortawesome/free-solid-svg-icons';
+import {faMagnifyingGlass, faBars, faXmark} from "../../utils/icons";
 import NavLinks from './NavLinks';
 import { api } from '@/api';
 import { logout } from '../../utils/logout';
