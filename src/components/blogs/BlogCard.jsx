@@ -2,8 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faComment } from '@fortawesome/free-solid-svg-icons';
 import { getExcerpt } from '@/utils/getExcerpt';
-import { faBookmark as solidBookmark } from '@fortawesome/free-solid-svg-icons';
-import { faBookmark as regularBookmark } from '@fortawesome/free-regular-svg-icons';
+import {faBookmark, regularBookmark} from "../../utils/icons";
 import { Link } from 'react-router-dom';
 
 const BlogCard = ({ blog, handleToggleBookmark }) => {
@@ -46,7 +45,6 @@ const BlogCard = ({ blog, handleToggleBookmark }) => {
           </div>
         </div>
 
-        {/* Excerpt */}
         <Link to={`/blogs/${blog.id}`} key={blog.id}>
           <div className="feed-excerpt py-4 text-gray-600 text-base leading-relaxed">
             <div
@@ -90,7 +88,7 @@ const BlogCard = ({ blog, handleToggleBookmark }) => {
           >
             {blog.bookmarked ? (
               <FontAwesomeIcon
-                icon={solidBookmark}
+                icon={faBookmark}
                 className="text-yellow-500 text-xl"
               />
             ) : (

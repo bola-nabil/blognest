@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react';
 import Container from '@/components/Container';
 import { api } from '@/api';
 import { Link, useParams } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faHeart,
+  faBookmark,
   faComment,
-  faTrash,
   faEdit,
+  faHeart,
   faSave,
   faTimes,
-  faBookmark,
-} from '@fortawesome/free-solid-svg-icons';
+  faTrash
+} from "../utils/icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import BlogDetailsSkeleton from '@/components/Loading/BlogDetailsSkeleton';
 import { useUserAuth } from '@/hooks/useUserAuth';
 

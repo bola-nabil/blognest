@@ -1,6 +1,5 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Container from '@/components/Container';
 import NavSettings from '@/components/settings/NavSettings';
 
 const Settings = () => {
