@@ -28,7 +28,6 @@ const FeedBlogs = () => {
 
   const { handleToggleBookmark } = useToggleBookmark(setFeeds);
 
-  // Handle empty and loading states
   if (feeds.length === 0) {
     if (loading) {
       return (
