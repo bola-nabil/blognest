@@ -4,7 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import Select from 'react-select';
-import LoadingButton from '@/components/Loading/LoadingButton';
+import SubmitButton from '@/components/ui/buttons/SubmitButton';
 
 const BlogUpdate = () => {
   const { id } = useParams();
@@ -281,18 +281,7 @@ const BlogUpdate = () => {
               styles={selectStyles}
             />
           </div>
-
-          <button
-            type="submit"
-            disabled={loading}
-            className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 shadow-md ${
-              loading
-                ? 'bg-gray-400 dark:bg-gray-600 cursor-not-allowed'
-                : 'bg-blue-600 hover:bg-blue-700 text-white'
-            }`}
-          >
-            {loading ? <LoadingButton /> : 'Update Blog'}
-          </button>
+            <SubmitButton loading={loading} text='Update Blog' />
         </form>
       </div>
     </div>

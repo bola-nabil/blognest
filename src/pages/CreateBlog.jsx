@@ -5,7 +5,7 @@ import Container from '@/components/Container';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import Select from 'react-select';
-import LoadingButton from '@/components/Loading/LoadingButton';
+import SubmitButton from '@/components/ui/buttons/SubmitButton';
 
 const CreateBlog = () => {
   const navigate = useNavigate();
@@ -83,7 +83,6 @@ const CreateBlog = () => {
     }
   };
 
-  // react-select styling
   const selectStyles = {
     control: (provided, state) => ({
       ...provided,
@@ -123,7 +122,6 @@ const CreateBlog = () => {
     }),
   };
 
-  // 🌓 Watch for dark mode changes
   useEffect(() => {
     const isDark = document.documentElement.classList.contains('dark');
     document.documentElement.style.setProperty(
@@ -140,7 +138,6 @@ const CreateBlog = () => {
     );
   });
 
-  // 🌙 CKEditor Dark Mode Fix
   const applyCKEditorDarkMode = (isDark) => {
     const editors = document.querySelectorAll('.ck.ck-editor__main');
     const toolbars = document.querySelectorAll('.ck.ck-toolbar');
@@ -151,7 +148,6 @@ const CreateBlog = () => {
     });
 
     toolbars.forEach((el) => {
-      // keep toolbar light in dark mode
       el.style.backgroundColor = isDark ? '#f3f4f6' : '#f9fafb';
       el.style.borderColor = isDark ? '#4b5563' : '#d1d5db';
       el.style.color = '#111827'; // make icons visible
@@ -174,7 +170,6 @@ const CreateBlog = () => {
         </div>
 
         <form onSubmit={handleSubmit} className="p-8 space-y-8">
-          {/* Title */}
           <div>
             <label
               htmlFor="title"
@@ -194,7 +189,6 @@ const CreateBlog = () => {
             />
           </div>
 
-          {/* Content */}
           <div>
             <label className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">
               Blog Content
@@ -219,7 +213,6 @@ const CreateBlog = () => {
                     );
                   });
 
-                  // fix toolbar color
                   const toolbar = editor.ui.view.toolbar.element;
                   toolbar.style.backgroundColor = isDark
                     ? '#f3f4f6'
@@ -237,7 +230,6 @@ const CreateBlog = () => {
             </div>
           </div>
 
-          {/* Image Upload */}
           <div>
             <label className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">
               Upload Cover Image
@@ -259,7 +251,6 @@ const CreateBlog = () => {
             )}
           </div>
 
-          {/* Categories */}
           <div>
             <label className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">
               Select Categories
@@ -277,7 +268,6 @@ const CreateBlog = () => {
             />
           </div>
 
-          {/* Tags */}
           <div>
             <label className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">
               Select Tags
@@ -295,19 +285,8 @@ const CreateBlog = () => {
             />
           </div>
 
-          {/* Submit Button */}
           <div className="pt-4">
-            <button
-              type="submit"
-              disabled={loading}
-              className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 shadow-md ${
-                loading
-                  ? 'bg-gray-400 cursor-not-allowed'
-                  : 'bg-blue-600 hover:bg-blue-700 text-white'
-              }`}
-            >
-              {loading ? <LoadingButton /> : 'Publish Blog'}
-            </button>
+            <SubmitButton loading={loading} text='Publish Blog'/>
           </div>
         </form>
       </div>
