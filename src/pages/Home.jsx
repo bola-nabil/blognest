@@ -1,7 +1,7 @@
 import React, {useMemo} from 'react';
 import { Link} from 'react-router-dom';
-import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faBookmark} from "../utils/icons";
 import { useBlogs } from '@/hooks/useBlogs';
 import Container from '../components/Container';
 import welcomeImg from '../assets/images/home.jpg';
