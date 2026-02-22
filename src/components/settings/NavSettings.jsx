@@ -1,33 +1,28 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faUser,
-  faLock,
-  faBars,
-  faXmark,
-  faPalette,
-} from '@fortawesome/free-solid-svg-icons';
+import {faUser, faLock, faBars, faXmark, faPalette} from "../../utils/icons";
+
+const navLinks = [
+  {
+    id: 1,
+    title: 'Update Profile',
+    path: '/settings/update-profile',
+    icon: faUser,
+  },
+  { id: 2, title: 'Security', path: '/settings/security', icon: faLock },
+  {
+    id: 3,
+    title: 'Appearance',
+    path: '/settings/appearance',
+    icon: faPalette,
+  },
+];
 
 const NavSettings = () => {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const navLinks = [
-    {
-      id: 1,
-      title: 'Update Profile',
-      path: '/settings/update-profile',
-      icon: faUser,
-    },
-    { id: 2, title: 'Security', path: '/settings/security', icon: faLock },
-    {
-      id: 3,
-      title: 'Appearance',
-      path: '/settings/appearance',
-      icon: faPalette,
-    },
-  ];
 
   return (
     <aside className="w-full md:w-64 bg-white dark:bg-gray-800 md:border-r border-gray-200 dark:border-gray-700 p-4 md:p-6 md:h-[calc(100vh-64px)] transition-colors duration-300">
