@@ -1,23 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faHouse,
-  faFire,
-  faTags,
-  faBookmark,
-  faNewspaper,
-} from '@fortawesome/free-solid-svg-icons';
+import {faHouse, faFire, faTags, faBookmark, faNewspaper} from "../../utils/icons";
 
-
-const NavLinks = () => {
-  const navLinks = [
+const navLinks = [
     { id: 1, title: 'Home', path: '/home', icon: faHouse },
     { id: 2, title: 'Explore', path: '/explore', icon: faFire },
     { id: 3, title: 'Categories', path: '/categories', icon: faTags },
     { id: 4, title: 'Bookmarks', path: '/bookmarks', icon: faBookmark },
     { id: 5, title: 'Feed', path: '/feed', icon: faNewspaper },
-  ];
+];
+
+const NavLinks = () => {
   return (
     <ul>
       {navLinks.map((link) => (
