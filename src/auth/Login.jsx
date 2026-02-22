@@ -39,7 +39,6 @@ const Login = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-400 to-blue-700">
       <div className="flex flex-col md:flex-row bg-white rounded-2xl shadow-xl overflow-hidden max-w-4xl w-full">
-        {/* Left Section */}
         <div className="md:w-1/2 flex flex-col items-center justify-center bg-gradient-to-br from-blue-500 to-blue-700 text-white p-10">
           <div className="text-center">
             <div className="bg-white p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -52,7 +51,6 @@ const Login = () => {
           </div>
         </div>
 
-        {/* Right Section - Form */}
         <div className="md:w-1/2 p-10">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
             Sign in to your account

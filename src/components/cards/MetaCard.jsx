@@ -34,7 +34,6 @@ const MetaCard = ({ blogs }) => {
                 />
               </div>
 
-              {/* Content */}
               <div className="flex flex-col flex-grow p-5">
                 <h3 className="font-bold text-lg md:text-xl text-gray-800 group-hover:text-blue-600 transition line-clamp-2">
                   {blog?.title || "Untitled Blog"}

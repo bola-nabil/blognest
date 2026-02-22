@@ -3,7 +3,7 @@ import { useBookmarks } from '@/hooks/useBookmarks';
 import { api } from '@/api';
 import { MoreVertical } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import LoadingSkeleton from '@/components/Loading/LoadingSkeleton'; // 👈 make sure this path is correct
+import LoadingSkeleton from '@/components/Loading/LoadingSkeleton';
 
 const BookmarksContent = () => {
   const { bookmarks, setBookmarks, loading } = useBookmarks();

@@ -1,8 +1,7 @@
 import React from 'react';
 import CategoryCard from './CategoryCard';
 import { useCategories } from '@/hooks/useCategories';
-import LoadingSkeleton from '@/components/Loading/LoadingSkeleton'; // 👈 import your skeleton
-
+import LoadingSkeleton from '@/components/Loading/LoadingSkeleton';
 const CategoriesContent = () => {
   const { categories, loading } = useCategories();
 
