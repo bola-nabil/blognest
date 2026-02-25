@@ -159,7 +159,7 @@ const ProfileContent = () => {
         </div>
       </div>
 
-      {/* Tabs */}
+      
       <div className="mt-8 flex justify-center gap-6 border-b border-gray-300 dark:border-gray-700">
         <button
           onClick={() => setActiveTab('posts')}
@@ -183,7 +183,6 @@ const ProfileContent = () => {
         </button>
       </div>
 
-      {/* Posts / Bookmarks */}
       <div className="mt-6">
         {activeTab === 'posts' ? (
           blogs.length > 0 ? (
