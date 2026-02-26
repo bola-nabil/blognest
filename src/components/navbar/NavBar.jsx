@@ -9,7 +9,7 @@ import ProfileNav from './ProfileNav';
 import NotificationBell from '../notifications/NotificationBell';
 
 const Navbar = () => {
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [showLists, setShowLists] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
@@ -37,6 +37,7 @@ const Navbar = () => {
       setIsMobile(window.innerWidth < 912);
     };
 
+    handleResize(); 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -70,7 +71,7 @@ const Navbar = () => {
             <div className="menu-bar" onClick={handleMenuOpen}>
               <FontAwesomeIcon icon={menuOpen ? faXmark : faBars} className='text-white text-[20px]'/>
             </div>
-            {isMobile && menuOpen && (
+            {menuOpen && (
               <div
                 className="mobile-navs absolute top-0 left-0 bg-white shadow-[0_4px_12px_rgba(0,0,0,0.15)] w-[200px] h-screen py-[10px] px-[25px]"
                 onClick={handleMenuOpen}
