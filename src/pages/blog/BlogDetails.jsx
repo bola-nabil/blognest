@@ -27,7 +27,6 @@ const BlogDetails = () => {
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [isFollowing, setIsFollowing] = useState(false);
   const [processing, setProcessing] = useState(false);
-  const [profile, setProfile] = useState(null);
   const { user } = useUserAuth();
 
   useEffect(() => {
@@ -72,7 +71,6 @@ const BlogDetails = () => {
       if (!blog?.user?.id) return;
       try {
         const res = await api.get(`/v1/users/${blog.user.id}/profile`);
-        setProfile(res.data.user);
         if (res.data.user?.is_following !== undefined) {
           setIsFollowing(res.data.user.is_following);
         }
