@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {memo} from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faHouse, faFire, faTags, faBookmark, faNewspaper} from "../../utils/icons";
+import {faHouse, faFire, faTags, faBookmark, faNewspaper} from "@/utils/icons";
 
 const navLinks = [
     { id: 1, title: 'Home', path: '/home', icon: faHouse },
@@ -15,7 +15,7 @@ const NavLinks = () => {
   return (
     <ul>
       {navLinks.map((link) => (
-        <li key={link.id} className='py-[10px] px[0]'>
+        <li key={link.id} className='py-[10px] px-[0]'>
           <FontAwesomeIcon icon={link.icon} className='pr-[20px]'/>
           <Link to={link.path}>{link.title}</Link>
         </li>
@@ -24,4 +24,4 @@ const NavLinks = () => {
   );
 };
 
-export default NavLinks;
+export default memo(NavLinks);
