@@ -11,3 +11,4 @@ export {default as TagShowSkeleton} from "./TagShowSkeleton";
 export {default as CategoryShowLoading} from "./CategoryShowLoading";
 export {default as CategoriesContentLoading} from "./CategoriesContentLoading";
 export {default as BookmarksLoading} from "./BookmarksLoading";
+export {default as TrendingTagsLoading} from "./TrendingTagsLoading";
