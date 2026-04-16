@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faMagnifyingGlass, faBars, faXmark} from "../../utils/icons";
+import {faMagnifyingGlass, faBars, faXmark} from "@/utils/icons";
 import NavLinks from './NavLinks';
 import { api } from '@/api';
-import { logout } from '../../utils/logout';
+import { logout } from "@/utils/logout";
 import ProfileNav from './ProfileNav';
 import NotificationBell from '../notifications/NotificationBell';
 

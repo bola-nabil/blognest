@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { getExcerpt } from '@/utils/getExcerpt';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faHeart, faComment} from "../../utils/icons";
+import {faHeart, faComment} from "@/utils/icons";
 
 const LastBlogsCard = ({ lastBlogs }) => {
   return (

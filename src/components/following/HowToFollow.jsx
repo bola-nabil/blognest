@@ -1,7 +1,7 @@
 import React from 'react';
 import { useUsers } from '@/hooks/useUsers';
 import { useFollow } from '@/hooks/useFollow';
-import FollowLoading from '../Loading/FollowLoading';
+import FollowLoading from '@/components/Loading/FollowLoading';
 
 const HowToFollow = () => {
   const { users, loading } = useUsers();

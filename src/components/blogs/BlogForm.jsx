@@ -96,7 +96,6 @@ const BlogForm = ({initialValues,initialImage = null, onSubmit,loading,tags, cat
                 </div>
             )
         }
-        { /* blog title */}
         <div>
         <label className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">
             Blog Title
@@ -111,7 +110,6 @@ const BlogForm = ({initialValues,initialImage = null, onSubmit,loading,tags, cat
         />
         </div>
         
-        { /* BLog Content*/}
         <div>
         <label className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">
             Blog Content
@@ -176,7 +174,6 @@ const BlogForm = ({initialValues,initialImage = null, onSubmit,loading,tags, cat
             )
         }
         
-        {/* Categories Tags */}
         <div>
             <label className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">
               Select Categories
@@ -194,7 +191,6 @@ const BlogForm = ({initialValues,initialImage = null, onSubmit,loading,tags, cat
             />
         </div>
         
-        { /* Tage Select */}
          <div>
             <label className="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">
               Select Tags
@@ -212,7 +208,6 @@ const BlogForm = ({initialValues,initialImage = null, onSubmit,loading,tags, cat
             />
         </div>
 
-        { /* Submit Button */}
         <div className="pt-4">
             <SubmitButton loading={loading} text='Publish Blog'/>
         </div>

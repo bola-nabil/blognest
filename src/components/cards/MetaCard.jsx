@@ -1,5 +1,5 @@
 import React from "react";
-import { getExcerpt } from "../../utils/getExcerpt";
+import { getExcerpt } from "@/utils/getExcerpt";
 import { Link } from "react-router-dom";
 
 const MetaCard = ({ blogs }) => {

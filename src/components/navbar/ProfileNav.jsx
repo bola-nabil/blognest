@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faRightToBracket, faGear, faPen} from  "../../utils/icons";
+import {faRightToBracket, faGear, faPen} from  "@/utils/icons";
 import { Link } from 'react-router-dom';
 
 const ProfileNav = ({ user, userName, handleShowList, showLists, logout }) => {
